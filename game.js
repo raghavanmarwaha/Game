@@ -6,14 +6,14 @@ var gamePattern = [];
 
 // Heading Changes
 
-var start = false;
+var started = false;
 var level = 0;
 
 $(document).keypress(function() {
-  if (!start) {
+  if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
-    start = true;
+    started = true;
   }
 });
 
@@ -88,5 +88,5 @@ function nextSequence() {
   function startOver(){
     level=0;
     gamePattern=[];
-    start=false;
+    started=false;
   }
